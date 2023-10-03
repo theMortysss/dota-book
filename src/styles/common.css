@@ -1,0 +1,15 @@
+:root {
+    --textColor: #F2F4F5;
+    --primaryColor: #23282D;
+    --secondaryColor: #191E23; 
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 60px;
+}
