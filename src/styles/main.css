@@ -1,0 +1,50 @@
+:root {
+    --text-color: #F2F4F5;
+    --secondary-text: #7A8A99;
+    --primary-color: #23282D;
+    --secondary-color: #191E23; 
+}
+html, body {
+    min-height: 100vh;
+
+    font-family: 'Ubuntu', sans-serif;
+
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+
+.none {
+    display: none !important;
+}
+
+a:hover {
+    /* Цвет при наведении */
+    color: var(--text-сolor);
+}
+
+a:visited {
+    /* Цвет посещённой ссылки */
+    color: var(--text-сolor);
+}
+
+a:active {
+    /* Цвет ссылки при клике */
+    color: var(--text-сolor);
+}

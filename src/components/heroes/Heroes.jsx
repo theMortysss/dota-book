@@ -1,6 +1,8 @@
 import Card from '../card/Card'
 import './heroes.css'
 
+import { heroes } from './../../helpers/heroesList'
+
 const Heroes = () => {
     return (
         <section className='heroes'>
@@ -13,22 +15,34 @@ const Heroes = () => {
                         <h2>Сортировка</h2>
                     </div>
                 </div>
-                <div className='heroes-cards'>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                </div>
-                <div className='heroes-cards'>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                </div>
+                <ul className='heroes-cards'>
+                    {
+                        heroes.map((hero, index) => {
+                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} Index={index} />
+                        }
+                        )}
+                </ul>
+                <ul className='heroes-cards'>
+                    {
+                        heroes.map((hero, index) => {
+                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
+                        }
+                        )}
+                </ul>
+                <ul className='heroes-cards'>
+                    {
+                        heroes.map((hero, index) => {
+                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
+                        }
+                        )}
+                </ul>
+                <ul className='heroes-cards'>
+                    {
+                        heroes.map((hero, index) => {
+                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
+                        }
+                        )}
+                </ul>
             </div>
         </section>
     );

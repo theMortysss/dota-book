@@ -1,0 +1,28 @@
+.nav {
+    padding: 20px 0;
+    background: var(--secondary-сolor);
+    border-bottom: 1px solid #26292d;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.logo {
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

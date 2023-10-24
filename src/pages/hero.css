@@ -6,13 +6,14 @@
 .hero-tab {
     padding-top: 20px;
     padding-bottom: 20px;
-    background: var(--secondaryColor);
+    background: var(--secondary-color);
 }
 
-.hero-tab-row {
+.hero-tab-list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    column-gap: 40px;
 }
 
 .hero-info-row {
@@ -46,4 +47,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-tab__link--active {
+    position: relative;
+}
+
+.hero-tab__link--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-color);
 }
