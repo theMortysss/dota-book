@@ -12,9 +12,6 @@ const Card = (props) => {
                     <div className={styles.card_name}>
                         <h3>{props.heroName}</h3>
                     </div>
-                    {/* <div className={styles.card_role}>
-                        <h3>{props.role}</h3>
-                    </div> */}
                 </div>
             </div>
         </li>

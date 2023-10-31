@@ -3,15 +3,20 @@
     padding-bottom: 21px;
 }
 
-.hero-title {}
+.hero-title {
+    font-size: xx-large;
+}
 
 
-.hero-img {}
+/* .hero-img {
+    width: 512px;
+    height: 288;
+} */
 
 .hero-desc-info {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 300px;
     row-gap: 10px;
 }
 
@@ -36,6 +41,10 @@
     width: 120px;
 }
 
+.hero-description {
+    width: 500px;
+}
+
 .hero-desc-info-row {
     padding-top: 21px;
     padding-bottom: 21px;
@@ -44,25 +53,60 @@
     column-gap: 30px;
 }
 
+.hero-main-info-container {
+    padding: 20px;
+    height: 180px;
+
+    background: var(--secondary-color);
+}
+
+.hero-main-info-titles {
+    display: flex;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
 .hero-main-info {
-    padding: 10px;
-    height: 160px;
+    height: 120px;
 
     display: flex;
     justify-content: space-around;
-    column-gap: 40px;
 
-    background: var(--secondary-color);
+    column-gap: 40px;
 }
 
 .hero-attr {
     display: grid;
     grid-template-columns: 20px 20px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+
+    text-align: left;
+}
+
+.hero-roles {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: repeat(5, 1fr);
     column-gap: 20px;
     row-gap: 20px;
 
-    text-align: center;
+    text-align: left;
+}
+
+.hero-roles h3 {
+    font-size: small;
+}
+
+.hero-ind {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 20px;
+
+    text-align: left;
 }
 
 .hero-skills-row {
@@ -83,6 +127,10 @@
     text-align: center;
 }
 
+.hero-abilitys h2 {
+    font-size: small;
+}
+
 
 .hero-talants {
     display: grid;
@@ -97,4 +145,8 @@
 .hero-talants h1 {
     font-size: large;
     color: brown;
+}
+
+.hero-talants h2 {
+    font-size: small;
 }
