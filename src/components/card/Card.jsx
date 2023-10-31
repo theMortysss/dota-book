@@ -5,16 +5,16 @@ const Card = (props) => {
     return (
         <li>
             <div className={styles.card}>
-                <a href={`/hero/${props.Index}`} className={styles.card_link}></a>
+                <a href={`/hero/${props.index}`} className={styles.card_link}></a>
                 <img className={styles.card_favorite} src={favorite} />
-                <img className={styles.card_img} src={props.Img} />
+                <img className={styles.card_img} src={props.img} />
                 <div className={styles.card_text}>
                     <div className={styles.card_name}>
-                        <h3>{props.Name}</h3>
+                        <h3>{props.heroName}</h3>
                     </div>
-                    <div className={styles.card_role}>
-                        <h3>{props.Role}</h3>
-                    </div>
+                    {/* <div className={styles.card_role}>
+                        <h3>{props.role}</h3>
+                    </div> */}
                 </div>
             </div>
         </li>

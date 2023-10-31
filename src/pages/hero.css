@@ -3,65 +3,98 @@
     padding-bottom: 21px;
 }
 
-.hero-tab {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.hero-title {}
+
+
+.hero-img {}
+
+.hero-desc-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    row-gap: 10px;
+}
+
+.hero-attack-type {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.hero-attack-type h2 {
+    width: 120px;
+}
+
+.hero-difficult {
+    display: flex;
+    align-items: center;
+    column-width: 80px;
+    column-gap: 20px;
+}
+
+.hero-difficult h2 {
+    width: 120px;
+}
+
+.hero-desc-info-row {
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    display: flex;
+    column-gap: 30px;
+}
+
+.hero-main-info {
+    padding: 10px;
+    height: 160px;
+
+    display: flex;
+    justify-content: space-around;
+    column-gap: 40px;
+
     background: var(--secondary-color);
 }
 
-.hero-tab-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    column-gap: 40px;
-}
-
-.hero-info-row {
-    display: flex;
-    column-gap: 30px;
-    padding-bottom: 21px;
-}
-
-.hero-img {
-    
-}
-
-.hero-info {
+.hero-attr {
     display: grid;
-    height: 200px;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 20px 20px;
     grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
     row-gap: 20px;
+
+    text-align: center;
 }
 
-.hero-talant {
-    margin-left: 300px;
-}
+.hero-skills-row {
+    padding-top: 42px;
+    padding-bottom: 42px;
 
-.hero-title {
-    padding-bottom: 21px;
-}
-
-.hero-tab-info {
-    height: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.hero-tab__link--active {
-    position: relative;
+.hero-abilitys {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    text-align: center;
 }
 
-.hero-tab__link--active::before {
-    content: "";
 
-    position: absolute;
-    left: 0;
-    top: 100%;
+.hero-talants {
+    display: grid;
+    grid-template-columns: 200px 20px 200px;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
 
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--text-color);
+    text-align: center;
+}
+
+.hero-talants h1 {
+    font-size: large;
+    color: brown;
 }

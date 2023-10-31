@@ -18,28 +18,7 @@ const Heroes = () => {
                 <ul className='heroes-cards'>
                     {
                         heroes.map((hero, index) => {
-                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} Index={index} />
-                        }
-                        )}
-                </ul>
-                <ul className='heroes-cards'>
-                    {
-                        heroes.map((hero, index) => {
-                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
-                        }
-                        )}
-                </ul>
-                <ul className='heroes-cards'>
-                    {
-                        heroes.map((hero, index) => {
-                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
-                        }
-                        )}
-                </ul>
-                <ul className='heroes-cards'>
-                    {
-                        heroes.map((hero, index) => {
-                            return <Card key={index} Name={hero.Name} Role={hero.Role} Img={hero.Img} />
+                            return <Card key={index} heroName={hero.heroName} role={hero.role} img={hero.img} index={index} />
                         }
                         )}
                 </ul>
