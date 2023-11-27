@@ -10,6 +10,18 @@ import alchemist_chemical_rage from './../img/heroesPictures/alchemist_chemical_
 import alchemist_corrosive_weaponry from './../img/heroesPictures/alchemist_corrosive_weaponry.png'
 import alchemist_unstable_concoction from './../img/heroesPictures/alchemist_unstable_concoction.png'
 
+import ancient_apparition from './../img/heroesPictures/ancient_apparition.png'
+import ancient_apparition_chilling_touch from './../img/heroesPictures/ancient_apparition_chilling_touch.png'
+import ancient_apparition_ice_vortex from './../img/heroesPictures/ancient_apparition_ice_vortex.png'
+import ancient_apparition_cold_feet from './../img/heroesPictures/ancient_apparition_cold_feet.png'
+import ancient_apparition_ice_blast from './../img/heroesPictures/ancient_apparition_ice_blast.png'
+
+import antimage from './../img/heroesPictures/antimage.png'
+import antimage_mana_break from './../img/heroesPictures/antimage_mana_break.png'
+import antimage_blink from './../img/heroesPictures/antimage_blink.png'
+import antimage_counterspell from './../img/heroesPictures/antimage_counterspell.png'
+import antimage_mana_void from './../img/heroesPictures/antimage_mana_void.png'
+
 
 const heroes = [
     {
@@ -185,6 +197,180 @@ const heroes = [
             "Leshrac"
         ],
         img: alchemist
+    },
+    {
+        heroName: 'ANCIENT APPARITION',
+        roleDesc: 'ЗАПУСКАЕТ МОЩНЫЙ ЛЕДЯНОЙ ШАР В ЛЮБУЮ ТОЧКУ КАРТЫ',
+        heroType: "ИНТЕЛЛЕКТ",
+        attackType: "ДАЛЬНИЙ БОЙ",
+        difficult: "СРЕДНЯЯ",
+        description: "Ancient Apparition, способный запустить мощный заряд льда через всё поле битвы, может заморозить раненых врагов до смерти, где бы те ни находились. Он держит врагов в напряжении, замедляя их и помогая своим союзникам.",
+        health: "560",
+        healthIncrease: "+2.3",
+        mana: "351",
+        manaIncrease: "+1.1",
+        attributes: [
+            "20",
+            "20",
+            "23"
+        ],
+        attributesIncrease: [
+            "+1,9",
+            "+2,2",
+            "+3,1"
+        ],
+        roles: [
+            0,
+            4,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        attack: [
+            "44-54",
+            "1.7",
+            "675",
+            "1250"
+        ],
+        protection: [
+            "2.3",
+            "25%"
+        ],
+        mobility: [
+            "285",
+            "0.6",
+            "1800 / 800"
+        ],
+        talants: [
+            "+40 к урону в секунду от Cold Feet", "+300 к дальности атаки от Chilling Touch",
+            "+300 к расстоянию разрыва у Cold Feet", "–2 сек. перезарядки Ice Vortex",
+            "+80 к урону от Chilling Touch", "+4 сек. к длительности Ice Vortex",
+            "+4% к здоровью для убийства у Ice Blast", "Cold Feet применяется по области радиусом 450"
+        ],
+        abilitys: [
+            "COLD FEET",
+            "ICE VORTEX",
+            "CHILLING TOUCH",
+            "ICE BLAST"
+        ],
+        abilitysImg: [
+            ancient_apparition_cold_feet,
+            ancient_apparition_ice_vortex,
+            ancient_apparition_chilling_touch,
+            ancient_apparition_ice_blast
+        ],
+        abilityDescription: [
+            "Накладывает на врага морозное заклятие, отчего тот получает периодический урон. Эффект развеется, если цель отойдёт достаточно далеко от точки применения способности. В противном случае через 4 секунды цель будет оглушена и приморозится к месту.",
+            "Создаёт вихрь ледяной энергии, который наносит врагам в области действия урон, замедляет их и увеличивает получаемый ими магический урон.",
+            "Увеличивает дальность следующей атаки. Она наносит значительный магический урон и замедляет жертву.",
+            "Отправляет снаряд в направлении выбранной точки на карте. Повторное применение запускает ледяной шар, который взорвётся там, где находился снаряд на момент активации. Чем дальше он пролетит, тем больше будет радиус взрыва. У врагов, которые оказались в радиусе взрыва или на пути ледяного шара, застывает кровь, отчего они не могут лечиться и восстанавливать здоровье. Если здоровье поражённой цели упадёт ниже определённого уровня, она мгновенно разобьётся на осколки."
+        ],
+        strongAgainst: [
+            "Huskar",
+            "Necrophos",
+            "Bristleback",
+            "Leshrac",
+            "Sand King"
+        ],
+        weakAgainst: [
+            "Lycan",
+            "Void Spirit",
+            "Anti-Mage",
+            "Storm Spirit",
+            "Arc Warden"
+        ],
+        img: ancient_apparition
+    },
+    {
+        heroName: 'ANTI-MAGE',
+        roleDesc: 'ВЫЖИГАЕТ МАНУ ВРАГОВ АТАКАМИ',
+        heroType: "ЛОВКОСТЬ",
+        attackType: "БЛИЖНИЙ БОЙ",
+        difficult: "ПРОСТО",
+        description: "Если Anti-Mage наберёт полную силу, мало кто сможет его остановить. Он способен забирать у врагов ману каждым ударом или телепортироваться на небольшие расстояния, что не позволяет врагам загнать его в угол.",
+        health: "538",
+        healthIncrease: "+2.6",
+        mana: "219",
+        manaIncrease: "+0.6",
+        attributes: [
+            "19",
+            "24",
+            "12"
+        ],
+        attributesIncrease: [
+            "+1,6",
+            "+2,8",
+            "+1,8"
+        ],
+        roles: [
+            5,
+            0,
+            2,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0
+        ],
+        attack: [
+            "53-57",
+            "1.4",
+            "150",
+            ""
+        ],
+        protection: [
+            "5.0",
+            "25%"
+        ],
+        mobility: [
+            "310",
+            "0.6",
+            "1800 / 800"
+        ],
+        talants: [
+            "+150 к радиусу Mana Void", "+9 к силе",
+            "–1 сек. перезарядки Blink", "+0.6% к сжигаемой макс. мане от Mana Burn",
+            "+150 к дальности Blink", "+0.15 к урону за единицу маны от Mana Void",
+            "–50 сек. перезарядки Mana Void", "+20% к сопротивлению магии от Counterspell"
+        ],
+        abilitys: [
+            "MANA BREAK",
+            "BLINK",
+            "COUNTERSPELL",
+            "MANA VOID"
+        ],
+        abilitysImg: [
+            antimage_mana_break,
+            antimage_blink,
+            antimage_counterspell,
+            antimage_mana_void
+        ],
+        abilityDescription: [
+            "Каждая атака сжигает ману цели и наносит ей урон, равный доле от сожжённой маны. Замедляет жертв, у которых нет маны.",
+            "Перемещение на короткую дистанцию, позволяющее ворваться в схватку или быстро из неё сбежать.",
+            "Пассивно увеличивает сопротивление магическому урону. Можно применить, чтобы создать вокруг себя противомагический щит, который полностью блокирует и отражает все направленные заклинания обратно во врага.",
+            "Кратковременно оглушает вражескую цель, а затем наносит ей и всем окружающим её противникам урон, пропорциональный числу отсутствующей у неё маны."
+        ],
+        strongAgainst: [
+            "Medusa",
+            "Phantom Lancer",
+            "Zeus",
+            "Ancient Apparition",
+            "Winter Wyvern"
+        ],
+        weakAgainst: [
+            "Meepo",
+            "Lone Druid",
+            "Legion Commander",
+            "Phantom Assassin",
+            "Troll Warlord"
+        ],
+        img: antimage
     }
 ];
 
