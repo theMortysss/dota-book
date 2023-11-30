@@ -1,9 +1,11 @@
 import Card from '../card/Card'
 import './heroes.css'
 
-import { heroes } from './../../helpers/heroesList'
+import { heroesList } from '../../helpers/heroesList'
 
-const Heroes = () => {
+const Heroes = (props) => {
+    const heroes = props.heroList
+    if (!heroes || heroes.length === 0) return <p></p>;
     return (
         <section className='heroes'>
             <div className='container'>
@@ -17,10 +19,10 @@ const Heroes = () => {
                 </div>
                 <ul className='heroes-cards'>
                     {
-                        heroes.map((hero, index) => {
-                            return <Card key={index} heroName={hero.heroName} role={hero.role} img={hero.img} index={index} />
-                        }
-                        )}
+                        heroes.map((hero) => {
+                            return <Card key={hero.ID} heroName={hero.Name} role={hero.Role} img={heroesList[hero.ID - 1].img} index={hero.ID} />
+                        })
+                    }
                 </ul>
             </div>
         </section>

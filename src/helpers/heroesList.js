@@ -23,7 +23,7 @@ import antimage_counterspell from './../img/heroesPictures/antimage_counterspell
 import antimage_mana_void from './../img/heroesPictures/antimage_mana_void.png'
 
 
-const heroes = [
+const heroesList = [
     {
         heroName: 'ABBADON',
         roleDesc: 'ЗАЩИЩАЕТ СОЮЗНИКОВ ИЛИ СЕБЯ САМОГО',
@@ -374,4 +374,4 @@ const heroes = [
     }
 ];
 
-export { heroes }
+export { heroesList };

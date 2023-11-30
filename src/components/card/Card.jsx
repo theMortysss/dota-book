@@ -5,7 +5,7 @@ const Card = (props) => {
     return (
         <li>
             <div className={styles.card}>
-                <a href={`/hero/${props.index}`} className={styles.card_link}></a>
+                <a href={`/hero/${props.index - 1}`} className={styles.card_link}></a>
                 <img className={styles.card_favorite} src={favorite} />
                 <img className={styles.card_img} src={props.img} />
                 <div className={styles.card_text}>
