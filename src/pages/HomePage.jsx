@@ -12,16 +12,22 @@ function HomePage() {
     });
 
     useEffect(() => {
-        setHeroListState({ loading: true });
-        fetch("http://dota-book-php/getHeroes.php", {
-            method: 'POST'
-        })
-            .then(response => response.json())
-            .then(response => {
-                console.log("HomeResponse", response);
-                setHeroListState({ loading: false, heroes: response });
+
+        async function getHeroes() {
+            setHeroListState({ loading: true });
+            fetch("http://dota-book-php/getHeroes.php", {
+                method: 'POST'
             })
-    }, [setHeroListState]);
+                .then(response => response.json())
+                .then(response => {
+                    console.log("HomeResponse", response);
+                    setHeroListState({ loading: false, heroes: response });
+                })
+        }
+
+        getHeroes();
+
+    }, []);
 
 
     return (

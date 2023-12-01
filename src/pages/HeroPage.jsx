@@ -7,9 +7,9 @@ import WithLoading from '../helpers/Loading';
 
 function HeroPage() {
     const { id } = useParams();
-
+    console.log(parseInt(id) + 1)
     const heroData = new FormData();
-    heroData.append("HeroID", id + 1);
+    heroData.append("HeroID", parseInt(id) + 1);
 
     const HeroLoading = WithLoading(Hero);
     const [heroState, setHeroState] = useState({
@@ -18,59 +18,66 @@ function HeroPage() {
     });
 
     useEffect(() => {
-        setHeroState({ loading: true });
-        Promise.all([
-            fetch("http://dota-book-php/getHeroById.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getDiffByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getAbilityByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getAttackTypeByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getParamsByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getSpecByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getTalantByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getTypeByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json()),
-            fetch("http://dota-book-php/getAttributeByHero.php", {
-                method: 'POST',
-                body: heroData
-            })
-                .then(response => response.json())
-        ])
-            .then(allResponses => {
-                console.log("HeroResponse", allResponses)
-                setHeroState({ loading: false, hero: allResponses });
-            })
-    }, [setHeroState]);
+
+        async function getResponse() {
+            setHeroState({ loading: true });
+            Promise.all([
+                fetch("http://dota-book-php/getHeroById.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getDiffByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getAbilityByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getAttackTypeByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getParamsByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getSpecByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getTalantByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getTypeByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json()),
+                fetch("http://dota-book-php/getAttributeByHero.php", {
+                    method: 'POST',
+                    body: heroData
+                })
+                    .then(response => response.json())
+            ])
+                .then(allResponses => {
+                    console.log("HeroResponse", allResponses)
+                    setHeroState({ loading: false, hero: allResponses });
+                })
+
+        }
+
+        getResponse();
+        
+    }, []);
 
 
     return (
