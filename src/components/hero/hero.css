@@ -3,31 +3,45 @@
     padding-bottom: 21px;
 }
 
-.hero-title {
-    font-size: xx-large;
+.hero-role {
+    color: var(--secondary-text);
 }
 
+.hero-title {
+    font-size: 60px;
+}
 
-/* .hero-img {
-    width: 512px;
-    height: 288;
-} */
+.hero-img {
+    width: 80%;
+    top: 60px;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+}
 
 .hero-desc-info {
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
-    row-gap: 10px;
+    row-gap: 40px;
 }
 
 .hero-attack-type {
     display: flex;
     align-items: center;
     column-gap: 20px;
+
+    z-index: 1;
 }
 
-.hero-attack-type h2 {
-    width: 120px;
+.hero-attack-type h1 {
+    /* width: 120px; */
+    color: var(--secondary-text);
+}
+
+.hero-attack-type img {
+    width: 30px;
 }
 
 .hero-difficult {
@@ -35,65 +49,130 @@
     align-items: center;
     column-width: 80px;
     column-gap: 20px;
+
+    z-index: 1
 }
 
-.hero-difficult h2 {
+.hero-difficult h1 {
+    /* width: 120px; */
+    color: var(--secondary-text);
+}
+
+.hero-type {
+    display: flex;
+    align-items: center;
+    column-width: 80px;
+    column-gap: 20px;
+
+    z-index: 1
+}
+
+.hero-type h2 {
     width: 120px;
 }
 
+.hero-type img {
+    width: 30px;
+}
+
 .hero-description {
-    width: 500px;
+    font-size: x-large;
 }
 
 .hero-desc-info-row {
-    padding-top: 21px;
-    padding-bottom: 21px;
-
+    padding-top: 22px;
+    padding-bottom: 42px;
+    width: 440px;
     display: flex;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 80px;
+    z-index: 1
 }
 
 .hero-main-info-container {
-    padding: 20px;
-    height: 180px;
+    padding-right: 130px;
+    padding-left: 130px;
+    height: 200px;
 
+    position: relative;
     background: var(--secondary-color);
+    z-index: 1;
 }
 
 .hero-main-info-titles {
+    color: var(--secondary-text);
+
     display: flex;
     justify-content: space-around;
 
     text-align: center;
 }
 
+.hero-main-info-titles h1 {
+    z-index: 4;
+}
+
 .hero-main-info {
-    height: 120px;
+    height: 160px;
 
     display: flex;
-    justify-content: space-around;
 
-    column-gap: 40px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+    z-index: 1
+}
+
+.hero-stats {
+    height: 100px;
+
+    z-index: 1
+}
+
+.hero-stats img {
+    height: 80px;
+    width: 142px;
 }
 
 .hero-attr {
+    height: 100px;
+
     display: grid;
-    grid-template-columns: 20px 20px;
+    grid-template-columns: 30px 30px 30px;
     grid-template-rows: repeat(5, 1fr);
-    column-gap: 20px;
+    column-gap: 10px;
     row-gap: 10px;
 
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    z-index: 1
+}
+
+.hero-attr h2 {
+    font-size: 20px;
+}
+
+.hero-attr h3 {
+    font-size: 15px;
+    color: var(--secondary-text);
 }
 
 .hero-roles {
+    height: 100px;
+
     display: grid;
-    grid-template-columns: 120px 120px 120px;
+    grid-template-columns: 150px 150px 150px;
     grid-template-rows: repeat(5, 1fr);
     column-gap: 20px;
     row-gap: 20px;
 
+    justify-content: center;
     text-align: left;
+
+    z-index: 1
 }
 
 .hero-roles h3 {
@@ -101,12 +180,54 @@
 }
 
 .hero-ind {
+    height: 100px;
+
     display: grid;
-    grid-template-columns: 80px 80px 80px;
+    grid-template-columns: 80px 80px 120px;
     grid-template-rows: repeat(5, 1fr);
     column-gap: 20px;
 
+    justify-content: center;
     text-align: left;
+
+    z-index: 1;
+}
+
+.hero-ind h2 {
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-text);
+}
+
+.hero-ind-atk-value {
+    height: 20px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: left;
+}
+
+.hero-ind-prot-value {
+    height: 20px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: left;
+}
+
+.hero-ind-mob-value {
+    height: 20px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: left;
+}
+
+.hero-skills-container {
+    display: flex;
+    width: 110%;
+    height: 110%;
+
+    background: var(--primary-color);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-skills-row {
@@ -149,4 +270,69 @@
 
 .hero-talants h2 {
     font-size: small;
+}
+
+.hero-spec-container {
+    width: 100px;
+    height: 5px;
+    position: relative;
+}
+
+.hero-spec {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-box-shadow: 0px 0px 1px 1px white;
+    -moz-box-shadow: 0px 0px 1px 1px white;
+    box-shadow: 0px 0px 1px 1px white;
+}
+
+.hero-spec-stack-on-top {
+    z-index: 9;
+}
+
+.hero-role-spec {
+    padding-bottom: 4px;
+}
+
+.hero-base-stats-container {
+    width: 142px;
+    height: 20px;
+    position: relative;
+}
+
+.hero-base-stats {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-base-stats-v {
+    font-size: medium;
+    color: azure;
+    margin-left: 60px;
+}
+
+.hero-base-statsInc-v {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: small;
+    color: black;
+}
+
+.hero-base-stats-stack-on-top {
+    z-index: 9;
+}
+
+.test {
+    display: flex;
+    
+    column-gap: 20px;
+    justify-content: flex-start;
+    
+    align-items: center;
 }
