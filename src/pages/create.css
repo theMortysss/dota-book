@@ -1,0 +1,131 @@
+.hero-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.hero-create-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-create-text input {
+  width: 200px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.hero-create-text select {
+  width: 200px;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+
+  border: 3px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.hero-ability-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-ability-container textarea {
+  height: 200px;
+  width: 200px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.hero-abil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-attr-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-param-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-specc-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-talant-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hero-create-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-uploader-preview {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed gray;
+  border-radius: 12px;
+}
+
+.hero-create-big-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.big-file-uploader-preview {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed gray;
+  border-radius: 12px;
+}

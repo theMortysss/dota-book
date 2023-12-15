@@ -1,4 +1,5 @@
-import { heroesList } from '../../helpers/heroesList';
+import { typeImg } from '../../helpers/images';
+import { atkImg } from '../../helpers/images';
 import './hero.css'
 import Tabs from '.././tabs/Tab';
 
@@ -67,19 +68,22 @@ const Hero = (props) => {
     if (!heroProp || heroProp.length === 0) return <p></p>;
 
 
-    const hero = heroesList[heroProp[0][0].ID - 1];
+    // const hero = heroesList[heroProp[0][0].ID - 1];
 
-    console.log("test", heroProp[0][0])
+    // console.log("test", heroProp)
 
-    const heroMain = heroProp[0][0];
+    const heroMain = heroProp[0];
     const heroDiff = heroProp[1];
     const heroAbil = heroProp[2];
     const heroAttackType = heroProp[3];
-    const heroParams = heroProp[4][0];
-    const heroSpec = heroProp[5][0];
+    const heroParams = heroProp[4];
+    const heroSpec = heroProp[5];
     const heroTalants = heroProp[6];
     const heroType = heroProp[7];
-    const heroAttr = heroProp[8][0];
+    const heroAttr = heroProp[8];
+
+    // console.log("HeroTypeID",heroType.htID - 1)
+    // console.log("HeroAttackTypeID",heroAttackType.atID - 1)
 
     // console.log("heroMain", heroMain)
     // console.log("heroDiff", heroDiff)
@@ -96,7 +100,7 @@ const Hero = (props) => {
         <section className='hero'>
             <div className="container">
                 <div className='hero-type'>
-                    <img src={hero.typeImg} />
+                    <img src={typeImg[heroType.htID - 1]} />
                     <h2>{heroType.Titile}</h2>
                 </div>
                 <div className="hero-title">
@@ -112,7 +116,7 @@ const Hero = (props) => {
                     <div className='hero-desc-info'>
                         <div className='hero-attack-type'>
                             <h1>ТИП АТАКИ</h1>
-                            <img src={hero.atkImg} />
+                            <img src={atkImg[heroAttackType.atID - 1]} />
                             <h2>{heroAttackType.Title}</h2>
                         </div>
                         <div className='hero-difficult'>
@@ -122,14 +126,16 @@ const Hero = (props) => {
                     </div>
                 </div>
                 <div className='hero-img'>
-                    <img src={hero.imgBig} />
+                    {/* <img src={heroMain.ImageBig} /> */}
+                    <img src={`data:image/png;base64,${heroMain.ImageBig}`}/>
                 </div>
             </div>
 
             <div className='hero-main-info-container'>
                 <div className='hero-main-info'>
                     <div className='hero-stats'>
-                        <img src={hero.img} />
+                        {/* <img src={hero.img} /> */}
+                        <img src={`data:image/png;base64,${heroMain.Image}`}/>
                         <DrawStats color="green" stat={heroAttr.Health} statInc={heroAttr.HealthInc} />
                         <DrawStats color="blue" stat={heroAttr.Mana} statInc={heroAttr.ManaInc} />
                     </div>
@@ -257,16 +263,20 @@ const Hero = (props) => {
                 <div className='hero-skills-container'>
                     <div className='hero-skills-row'>
                         <div className='hero-abilitys'>
-                            <img src={hero.abilitysImg[0]} />
+                            {/* <img src={hero.abilitysImg[0]} /> */}
+                            <img src={`data:image/png;base64,${heroAbil[0].Image}`}/>
                             <h2>{heroAbil[0].Description}</h2>
 
-                            <img src={hero.abilitysImg[1]} />
+                            {/* <img src={hero.abilitysImg[1]} /> */}
+                            <img src={`data:image/png;base64,${heroAbil[1].Image}`}/>
                             <h2>{heroAbil[1].Description}</h2>
 
-                            <img src={hero.abilitysImg[2]} />
+                            {/* <img src={hero.abilitysImg[2]} /> */}
+                            <img src={`data:image/png;base64,${heroAbil[2].Image}`}/>
                             <h2>{heroAbil[2].Description}</h2>
 
-                            <img src={hero.abilitysImg[3]} />
+                            {/* <img src={hero.abilitysImg[3]} /> */}
+                            <img src={`data:image/png;base64,${heroAbil[3].Image}`}/>
                             <h2>{heroAbil[2].Description}</h2>
                         </div>
                         <div className='hero-talants'>

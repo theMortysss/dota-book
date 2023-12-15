@@ -7,6 +7,7 @@ import {
 
 import HomePage from './pages/HomePage';
 import HeroPage from './pages/HeroPage';
+import CreatePage from './pages/CreatePage';
 
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
@@ -22,6 +23,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/hero/:id' element={<HeroPage />} />
+                    <Route path='/create' element={<CreatePage />} />
                 </Routes>
             </Router>
             <Footer />

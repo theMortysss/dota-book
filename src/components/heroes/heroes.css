@@ -1,6 +1,7 @@
 .heroes {
     padding: 21px 0;
 }
+
 .heroes-header {
     padding-bottom: 21px;
     display: flex;
@@ -12,6 +13,26 @@
 }
 
 .heroes-cards {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.create {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn {
+    font-size: large;
+    color: var(--text-color);
+    height: 40px;
+    width: 200px;
 }

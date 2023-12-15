@@ -7,7 +7,8 @@ import WithLoading from '../helpers/Loading';
 
 function HeroPage() {
     const { id } = useParams();
-    console.log(parseInt(id) + 1)
+    // console.log(parseInt(id) + 1)
+    
     const heroData = new FormData();
     heroData.append("HeroID", parseInt(id) + 1);
 
