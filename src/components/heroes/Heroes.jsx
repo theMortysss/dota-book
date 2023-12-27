@@ -18,9 +18,6 @@ const Heroes = (props) => {
                     <div className='heroes-title'>
                         <h2>Герои</h2>
                     </div>
-                    <div className='heroes-sort'>
-                        <h2>Сортировка</h2>
-                    </div>
                 </div>
                 <ul className='heroes-cards'>
                     {

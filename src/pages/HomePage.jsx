@@ -15,7 +15,7 @@ function HomePage() {
 
         async function getHeroes() {
             setHeroListState({ loading: true });
-            fetch("http://dota-book-php/getHeroes.php", {
+            fetch("http://back.pifpaf8b.beget.tech/getHeroes.php", {
                 method: 'POST'
             })
                 .then(response => response.json())
@@ -24,9 +24,8 @@ function HomePage() {
                     setHeroListState({ loading: false, heroes: response });
                 })
         }
-
-        getHeroes();
-
+        if(heroListState.heroes == null)
+            getHeroes();
     }, []);
 
 

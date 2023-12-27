@@ -110,7 +110,7 @@ const CreatePage = () => {
     useEffect(() => {
 
         async function getLastID() {
-            fetch("http://dota-book-php/getHeroes.php", {
+            fetch("http://back.pifpaf8b.beget.tech/getHeroes.php", {
                 method: 'POST'
             })
                 .then(response => response.json())
@@ -216,7 +216,7 @@ const CreatePage = () => {
         // })
 
 
-        fetch("http://dota-book-php/createNewHero.php", {
+        fetch("http://back.pifpaf8b.beget.tech/createNewHero.php", {
             method: 'POST',
             body: heroData
         }).finally(f => {

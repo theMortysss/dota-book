@@ -23,47 +23,47 @@ function HeroPage() {
         async function getResponse() {
             setHeroState({ loading: true });
             Promise.all([
-                fetch("http://dota-book-php/getHeroById.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getHeroById.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getDiffByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getDiffByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getAbilityByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getAbilityByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getAttackTypeByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getAttackTypeByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getParamsByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getParamsByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getSpecByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getSpecByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getTalantByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getTalantByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getTypeByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getTypeByHero.php", {
                     method: 'POST',
                     body: heroData
                 })
                     .then(response => response.json()),
-                fetch("http://dota-book-php/getAttributeByHero.php", {
+                fetch("http://back.pifpaf8b.beget.tech/getAttributeByHero.php", {
                     method: 'POST',
                     body: heroData
                 })

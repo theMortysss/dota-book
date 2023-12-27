@@ -11,7 +11,7 @@ const Nav = () => {
           <a className='logo' href="/">
             <h1>DotaBook</h1>
           </a>
-          <ul className='nav-list'>
+          {/* <ul className='nav-list'>
             <li className='nav-list__item'>
               <a className='nav-list__link' href="/profile">
                 <img src={profile} />
@@ -27,7 +27,7 @@ const Nav = () => {
                 <img src={menu} />
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </nav>

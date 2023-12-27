@@ -133,136 +133,136 @@ class DBClass {
 
 
     function createHero($newHero) {
-        // $query = "
-        // INSERT INTO 
-        // Hero 
-        // (	
-        //     Name,	
-        //     Role,	
-        //     Description,	
-        //     AttackTypeID,	
-        //     DifficultID,	
-        //     HeroTypeID,	
-        //     Image,	
-        //     ImageBig
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[1]',	
-        //     '$newHero[2]',	
-        //     '$newHero[3]',	
-        //     '$newHero[4]',	
-        //     '$newHero[5]',	
-        //     '$newHero[6]',	
-        //     '$newHero[55]',	
-        //     '$newHero[56]'
-        // )";
+        $query = "
+        INSERT INTO 
+        Hero 
+        (	
+            Name,	
+            Role,	
+            Description,	
+            AttackTypeID,	
+            DifficultID,	
+            HeroTypeID,	
+            Image,	
+            ImageBig
+        ) 
+        VALUES 
+        (
+            '$newHero[1]',	
+            '$newHero[2]',	
+            '$newHero[3]',	
+            '$newHero[4]',	
+            '$newHero[5]',	
+            '$newHero[6]',	
+            '$newHero[55]',	
+            '$newHero[56]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
-        // $query = "INSERT INTO 
-        // Ability 
-        // (	
-        //     HeroID,
-        //     Ability,
-        //     Description,
-        //     Image
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[0]',	
-        //     '$newHero[7]',	
-        //     '$newHero[8]',	
-        //     '$newHero[15]'
-        // )";
+        $query = "INSERT INTO 
+        Ability 
+        (	
+            HeroID,
+            Ability,
+            Description,
+            Image
+        ) 
+        VALUES 
+        (
+            '$newHero[0]',	
+            '$newHero[7]',	
+            '$newHero[8]',	
+            '$newHero[15]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
-        // $query = "INSERT INTO 
-        // Ability 
-        // (	
-        //     HeroID,
-        //     Ability,
-        //     Description,
-        //     Image
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[0]',	
-        //     '$newHero[9]',	
-        //     '$newHero[10]',	
-        //     '$newHero[16]'
-        // )";
+        $query = "INSERT INTO 
+        Ability 
+        (	
+            HeroID,
+            Ability,
+            Description,
+            Image
+        ) 
+        VALUES 
+        (
+            '$newHero[0]',	
+            '$newHero[9]',	
+            '$newHero[10]',	
+            '$newHero[16]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
-        // $query = "INSERT INTO 
-        // Ability 
-        // (	
-        //     HeroID,
-        //     Ability,
-        //     Description,
-        //     Image
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[0]',	
-        //     '$newHero[11]',	
-        //     '$newHero[12]',	
-        //     '$newHero[17]'
-        // )";
+        $query = "INSERT INTO 
+        Ability 
+        (	
+            HeroID,
+            Ability,
+            Description,
+            Image
+        ) 
+        VALUES 
+        (
+            '$newHero[0]',	
+            '$newHero[11]',	
+            '$newHero[12]',	
+            '$newHero[17]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
-        // $query = "INSERT INTO 
-        // Ability 
-        // (	
-        //     HeroID,
-        //     Ability,
-        //     Description,
-        //     Image
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[0]',	
-        //     '$newHero[13]',	
-        //     '$newHero[14]',	
-        //     '$newHero[18]'
-        // )";
+        $query = "INSERT INTO 
+        Ability 
+        (	
+            HeroID,
+            Ability,
+            Description,
+            Image
+        ) 
+        VALUES 
+        (
+            '$newHero[0]',	
+            '$newHero[13]',	
+            '$newHero[14]',	
+            '$newHero[18]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
-        // $query = "INSERT INTO 
-        // Attribute 
-        // (	
-        //     HeroID,	
-        //     Strength,	
-        //     StrengthInc,	
-        //     Agility,	
-        //     AgilityInc,	
-        //     Intelligence,	
-        //     IntelligenceInc,
-        //     Health,	
-        //     HealthInc,	
-        //     Mana,	
-        //     ManaInc	
-        // ) 
-        // VALUES 
-        // (
-        //     '$newHero[0]',	
-        //     '$newHero[19]',	
-        //     '$newHero[20]',	
-        //     '$newHero[21]',
-        //     '$newHero[22]',	
-        //     '$newHero[23]',	
-        //     '$newHero[24]',	
-        //     '$newHero[25]',
-        //     '$newHero[26]',	
-        //     '$newHero[27]',	
-        //     '$newHero[28]'
-        // )";
+        $query = "INSERT INTO 
+        Attribute 
+        (	
+            HeroID,	
+            Strength,	
+            StrengthInc,	
+            Agility,	
+            AgilityInc,	
+            Intelligence,	
+            IntelligenceInc,
+            Health,	
+            HealthInc,	
+            Mana,	
+            ManaInc	
+        ) 
+        VALUES 
+        (
+            '$newHero[0]',	
+            '$newHero[19]',	
+            '$newHero[20]',	
+            '$newHero[21]',
+            '$newHero[22]',	
+            '$newHero[23]',	
+            '$newHero[24]',	
+            '$newHero[25]',
+            '$newHero[26]',	
+            '$newHero[27]',	
+            '$newHero[28]'
+        )";
         
-        // mysqli_query($this->link, $query);
+        mysqli_query($this->link, $query);
 
 
         $query = "
